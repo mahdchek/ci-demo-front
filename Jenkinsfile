@@ -6,6 +6,7 @@ node('amazon-vm') {
 
   stage ("build"){
     sh "npm install"
+    sh "chmod 777 -R ./"
     sh "ng build --prod"
   }
 
