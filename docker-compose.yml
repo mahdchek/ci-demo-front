@@ -1,0 +1,12 @@
+version: '2'
+services:
+  ci-demo-front:
+    build:
+      context: ci-front
+      dockerfile: Dockerfile
+    container_name: ci-front
+    image: ci-front
+    ports:
+      - "8072:80"
+    volumes:
+      - ./conf:/etc/nginx/conf.d/
