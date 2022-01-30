@@ -5,6 +5,7 @@ node('amazon-vm') {
   }
 
   stage ("build"){
+    sh "npm install"
     sh "ng build --prod"
   }
 
